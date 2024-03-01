@@ -11,6 +11,23 @@
     "require-dev": {
         "symplify/easy-coding-standard": "^12.1",
         "phpstan/phpstan": "^1.10",
-        "phpunit/phpunit": "^11"
+        "phpunit/phpunit": "^11",
+        "phpro/grumphp": "^2.5"
+    },
+    "config": {
+        "allow-plugins": {
+            "phpro/grumphp": true
+        }
+    },
+    "scripts": {
+        "precommit-check": [
+            "@cs-check",
+            "@test",
+            "@inspect"
+        ],
+        "cs-check": "ecs check src",
+        "cs-fix": "ecs check src --fix",
+        "inspect": "phpstan analyse src -l9 --ansi",
+        "test": "phpunit --colors=always"
     }
 }
