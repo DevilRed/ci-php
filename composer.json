@@ -1,0 +1,14 @@
+{
+    "name": "christian/test-dev-ci",
+    "description": "Test development continuous integration pipeline",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "TestDevCi\\": "src/"
+        }
+    },
+    "require-dev": {
+        "symplify/easy-coding-standard": "^12.1"
+    }
+}
