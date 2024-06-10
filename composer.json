@@ -12,7 +12,8 @@
         "symplify/easy-coding-standard": "^12.1",
         "phpstan/phpstan": "^1.10",
         "phpunit/phpunit": "^11",
-        "phpro/grumphp": "^2.5"
+        "phpro/grumphp": "^2.5",
+        "phpmd/phpmd": "^2.15"
     },
     "config": {
         "allow-plugins": {
@@ -23,11 +24,13 @@
         "precommit-check": [
             "@cs-check",
             "@test",
-            "@inspect"
+            "@inspect",
+            "@mess-detector"
         ],
         "cs-check": "ecs check src",
         "cs-fix": "ecs check src --fix",
         "inspect": "phpstan analyse src -c phpstan.neon --ansi",
-        "test": "phpunit --colors=always"
+        "test": "phpunit --colors=always",
+        "mess-detector": "phpmd . text rulesets.xml"
     }
 }
