@@ -27,7 +27,7 @@
         ],
         "cs-check": "ecs check src",
         "cs-fix": "ecs check src --fix",
-        "inspect": "phpstan analyse src -l9 --ansi",
+        "inspect": "phpstan analyse src -c phpstan.neon --ansi",
         "test": "phpunit --colors=always"
     }
 }

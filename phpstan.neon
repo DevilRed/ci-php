@@ -1,0 +1,10 @@
+parameters:
+        bootstrapFiles:
+        	- vendor/autoload.php
+        level: 5
+        #tmpDir: /var/cache/phpstan
+        paths:
+        	- .
+        inferPrivatePropertyTypeFromConstructor: true
+        excludePaths:
+        	- vendor
