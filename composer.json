@@ -41,7 +41,7 @@
         "cs-fix": "ecs check src --fix",
         "inspect": "phpstan analyse src -c phpstan.neon --ansi",
         "test": "pest",
-        "test:coverage": "pest --coverage",
+        "test:coverage": "XDEBUG_MODE=coverage pest --coverage",
         "mess-detector": "phpmd . text rulesets.xml",
         "rector": "rector process --dry-run",
         "rector:fix": "rector process"
