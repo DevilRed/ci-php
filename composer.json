@@ -42,6 +42,7 @@
         "inspect": "phpstan analyse src -c phpstan.neon --ansi",
         "test": "pest",
         "mess-detector": "phpmd . text rulesets.xml",
-        "rector": "rector process --dry-run"
+        "rector": "rector process --dry-run",
+        "rector:fix": "rector process"
     }
 }
