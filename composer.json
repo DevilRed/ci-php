@@ -19,7 +19,8 @@
         "php-parallel-lint/php-parallel-lint": "^1.4",
         "pestphp/pest": "^4.0",
         "symplify/easy-coding-standard": "^12.5",
-        "phpstan/phpstan": "^1.12"
+        "phpstan/phpstan": "^1.12",
+        "rector/rector": "^1.2"
     },
     "config": {
         "allow-plugins": {
@@ -40,6 +41,7 @@
         "cs-fix": "ecs check src --fix",
         "inspect": "phpstan analyse src -c phpstan.neon --ansi",
         "test": "pest",
-        "mess-detector": "phpmd . text rulesets.xml"
+        "mess-detector": "phpmd . text rulesets.xml",
+        "rector": "rector process --dry-run"
     }
 }
