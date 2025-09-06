@@ -8,17 +8,23 @@
             "TestDevCi\\": "src/"
         }
     },
+    "autoload-dev": {
+        "psr-4": {
+            "TestDevCi\\Test\\": "tests/"
+        }
+    },
     "require-dev": {
         "symplify/easy-coding-standard": "^12.1",
         "phpstan/phpstan": "^1.10",
-        "phpunit/phpunit": "^11",
         "phpro/grumphp": "^2.5",
         "phpmd/phpmd": "^2.15",
-        "php-parallel-lint/php-parallel-lint": "^1.4"
+        "php-parallel-lint/php-parallel-lint": "^1.4",
+        "pestphp/pest": "^4.0"
     },
     "config": {
         "allow-plugins": {
-            "phpro/grumphp": true
+            "phpro/grumphp": true,
+            "pestphp/pest-plugin": true
         }
     },
     "scripts": {
@@ -33,7 +39,7 @@
         "cs-check": "ecs check src",
         "cs-fix": "ecs check src --fix",
         "inspect": "phpstan analyse src -c phpstan.neon --ansi",
-        "test": "phpunit --colors=always",
+        "test": "pest",
         "mess-detector": "phpmd . text rulesets.xml"
     }
 }
